@@ -1,0 +1,22 @@
+<div>
+  <label class="bolder">Word to search for:</label>
+  <label class="bolder searchText">Month to search for:</label>
+  <label class="bolder searchText">Likes to search for:</label><br />
+  <input class="searchBox" type="text" name="word" value="" #word (change)="null" />
+  <input class="searchBox" name="month" value="" #month (change)="null" />
+  <input name="likes" value="" #likes (change)="null" />
+</div>
+<br />
+<div *ngFor="let tweet of twat" [ngClass]="{'greenText': containsWord(word.value, tweet)}">
+  <div *ngIf="containsLikes(tweet, likes.value) || containsMonth(tweet, month.value)">
+    <p class="bolder">
+      {{tweet.date}}
+    </p>
+    <p>
+      {{tweet.text}}
+    </p>
+    <p>
+      Likes: {{tweet.likes}} <img src="assets/thumbsup.svg" class="thumbsUp">
+    </p>
+  </div>
+</div>

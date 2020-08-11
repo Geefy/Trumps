@@ -1,0 +1,17 @@
+.bolder{
+    font-weight: bolder;
+}
+.thumbsUp{
+    height:20px;
+    width: 20px;
+}
+.greenText{
+    background-color:green;
+    color:white;
+}
+.searchText{
+    padding-left: 8%;
+}
+.searchBox{
+    margin-right: 5%;
+}
